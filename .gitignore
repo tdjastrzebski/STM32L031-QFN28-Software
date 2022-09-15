@@ -1,0 +1,10 @@
+/BUILD
+/dump
+/__pycache__
+.cortex-debug.*
+/mbed-os
+/lvgl
+/lv_examples
+debug.log
+/Debug
+*.state.json

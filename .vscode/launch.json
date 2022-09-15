@@ -1,0 +1,87 @@
+{
+    "version":"0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (OpenOCD)",
+            "type":"cortex-debug",
+            "request": "launch",
+            "servertype":"openocd",
+            "showDevDebugOutput": "both",
+            "cwd": "${workspaceRoot}/BUILD",
+            "executable": "${workspaceRoot}/BUILD/debug/${workspaceRootFolderName}.elf",
+            "svdFile": "${workspaceRoot}/STM32L0x1.svd",
+            "runToEntryPoint": "main",
+            "device": "STM32L031G6Ux",
+            "searchDir": ["C:/Program Files/OpenOCD/scripts"],
+            "configFiles": [
+                "/interface/stlink.cfg",
+                "/target/stm32l0.cfg",
+            ],
+            "interface": "swd",
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 180000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            },
+            //"debugServer": 4711
+        },
+        {
+            "name": "Debug (OpenOCD J)",
+            "type":"cortex-debug",
+            "request": "launch",
+            "servertype":"openocd",
+            "cwd": "${workspaceRoot}/BUILD",
+            "executable": "${workspaceRoot}/BUILD/debug/${workspaceRootFolderName}.elf",
+            "svdFile": "${workspaceRoot}/STM32L0x1.svd",
+            "runToEntryPoint": "main",
+            "device": "STM32L031G6Ux",
+            "searchDir": ["C:/Program Files/OpenOCD/scripts"],
+            "configFiles": [
+                "/interface/jlink.cfg",
+                "/target/stm32l0.cfg",
+            ],
+            "interface": "swd",
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 8000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }
+        },
+        {
+            "name": "Debug (ST-Util)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "stutil",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/BUILD/debug/${workspaceRootFolderName}.elf",
+            "svdFile": "${workspaceRoot}/STM32L0x1.svd",
+            "device": "STM32L031G6Ux",
+            "runToEntryPoint": "main",
+            "v1": false,
+            "interface": "swd",
+            //"debugServer": 4711,
+        },
+        {
+            "name": "Debug (pyOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype":"pyocd",
+            "showDevDebugOutput": "both",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/BUILD/debug/${workspaceRootFolderName}.elf",
+            "device": "STM32L031G6Ux",
+            "targetId": "STM32L031G6Ux",
+            "svdFile": "${workspaceRoot}/STM32L0x1.svd",
+            "runToEntryPoint": "main",
+            "interface": "swd"
+        }
+    ]
+}
