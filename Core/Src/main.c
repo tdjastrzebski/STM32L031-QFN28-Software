@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "master.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,14 +93,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		static uint32_t pattern = 0xf0f0f0f0;
-		static uint8_t shift = 0;
-
-		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, (pattern >> shift) & 0x01 ? GPIO_PIN_SET : GPIO_PIN_RESET);
-		shift++;
-		shift %= 32;
-
-		HAL_Delay(100);
+    MainLoop();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
