@@ -30,7 +30,7 @@
 					"params": {
 						"flags": "${cpu} --specs=nano.specs ${fpu} -mthumb -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF[${outputFile}] -MT[${outputFile}]"
 					},
-					"command": "arm-none-eabi-gcc -std=gnu11 -c ${flags} ${buildTypeFlags} (-I[$${includePath}]) (-D$${defines}) (-include [$${forcedInclude}]) [${filePath}] -o [${outputFile}]"
+					"command": "arm-none-eabi-gcc -std=gnu17 -c ${flags} ${buildTypeFlags} (-I[$${includePath}]) (-D$${defines}) (-include [$${forcedInclude}]) [${filePath}] -o [${outputFile}]"
 				},
 				{
 					"name": "C++ Compile",
@@ -40,7 +40,7 @@
 					"params": {
 						"flags": "${cpu} --specs=nano.specs ${fpu} -mthumb -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF[${outputFile}] -MT[${outputFile}]"
 					},
-					"command": "arm-none-eabi-g++ -std=gnu++14 -c ${flags} ${buildTypeFlags} (-I[$${includePath}]) (-D$${defines}) (-include [$${forcedInclude}]) [${filePath}] -o [${outputFile}]"
+					"command": "arm-none-eabi-g++ -std=gnu++17 -c ${flags} ${buildTypeFlags} (-I[$${includePath}]) (-D$${defines}) (-include [$${forcedInclude}]) [${filePath}] -o [${outputFile}]"
 				},
 				{
 					"name": "Assembly Compile",
