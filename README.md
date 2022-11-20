@@ -51,3 +51,6 @@ Download from https://github.com/posborne/cmsis-svd/tree/master/data/STMicro and
 * [STM32L031G6](https://www.st.com/en/microcontrollers-microprocessors/stm32l031g6.html)
 * [DS10668 STM32L031x4 STM32L031x6](https://www.st.com/resource/en/datasheet/stm32l031g6.pdf)
 * [RM0377 Ultra-low-power STM32L0x1 advanced Arm®-based 32-bit MCU](https://www.st.com/resource/en/reference_manual/rm0377-ultralowpower-stm32l0x1-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
+
+## GCC Compiler
+* [Guide: GCC and Bare Metal Programming](http://cs107e.github.io/guides/gcc)
