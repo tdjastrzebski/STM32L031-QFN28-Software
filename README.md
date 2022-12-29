@@ -17,6 +17,7 @@ or build it yourself following [this guide](https://github.com/Marus/cortex-debu
 * Unzip it to `OpenOCD` folder in `C:\Program Files`
 * Set `OpenOCD` system variable to 'C:\Program Files\OpenOCD'
 * Add `%OpenOCD%\bin` to system PATH variable
+* Set `XDG_CACHE_HOME` env variable to `%USERPROFILE%\AppData\Local\Temp` to prevent symbol cache path error
 > Note: xpm utility does not really support global installations (yet), hence I suggest the above approach.
 ## SVD file - MPU specific
 Download from https://github.com/posborne/cmsis-svd/tree/master/data/STMicro and place in the root folder.
@@ -50,3 +51,6 @@ Download from https://github.com/posborne/cmsis-svd/tree/master/data/STMicro and
 * [STM32L031G6](https://www.st.com/en/microcontrollers-microprocessors/stm32l031g6.html)
 * [DS10668 STM32L031x4 STM32L031x6](https://www.st.com/resource/en/datasheet/stm32l031g6.pdf)
 * [RM0377 Ultra-low-power STM32L0x1 advanced Arm®-based 32-bit MCU](https://www.st.com/resource/en/reference_manual/rm0377-ultralowpower-stm32l0x1-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
+
+## GCC Compiler
+* [Guide: GCC and Bare Metal Programming](http://cs107e.github.io/guides/gcc)
